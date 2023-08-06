@@ -1,0 +1,94 @@
+body {
+  background-color: #262846;
+}
+
+.timeline-area {
+  width: 470px;
+  margin: 90px auto;
+  padding: 20px;
+  border-left: 3px solid #1d1952;
+}
+
+.timeline-area div {
+  background-color: #1d1952;
+  margin: 20px;
+  padding: 20px;
+  border-radius: 10px;
+  color: white;
+  position: relative;
+}
+
+.timeline-area div b {
+  display: inline-block;
+  padding: 5px 10px;
+  color: white;
+  font-size: 10px;
+  font-weight: bold;
+  border-radius: 3px;
+}
+
+.timeline-area p {
+  font-size: 13px;
+  text-align: justify;
+}
+
+.timeline-area footer {
+  font-size: 9px !important;
+}
+
+.timeline-area div::before {
+  content: "";
+  position: absolute;
+  height: 35px;
+  width: 35px;
+  border-radius: 50%;
+  top: 14px;
+  left: -58px;
+
+}
+
+.timeline-area div::after {
+  content: "";
+  position: absolute;
+  height: 20px;
+  width: 20px;
+  transform: rotate(45deg);
+  background-color: white;
+  top: 22px;
+  left: -10px;
+  z-index: -1;
+  background-color: #1d1952;
+}
+
+.timeline-area div:nth-child(1)::before {
+    background-color: #007BFF !important;
+    background-image: url('/img/emoji1.png');
+    background-size: cover;
+    background-position: center;
+}
+.timeline-area div:nth-child(2)::before {
+    background-color: #DC3545 !important;
+    background-image: url('/img/emoji2.png');
+    background-size: cover;
+    background-position: center;
+}
+.timeline-area div:nth-child(3)::before {
+    background-color: #28A745 !important;
+    background-image: url('/img/emoji3.png') !important;
+    background-size: cover;
+    background-position: center;
+}
+
+.title-primary {
+    background-color: #007BFF !important;
+}
+
+.title-danger {
+    background-color: #DC3545 !important;
+}
+
+.title-success {
+    background-color: #28A745 !important;
+}
+
+

@@ -1,0 +1,27 @@
+
+/* Set some basic styles to make the div visible */
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f0f0f0;
+  }
+  
+  /* Define the background images */
+  .background-images {
+    width: 700px;
+    height: 500px;
+    background-image: url('iamge1.jpg');
+    background-size: cover, contain; /* Set the size of each background image */
+    background-position: top left, center; /* Set the position of each background image */
+    background-repeat: no-repeat, repeat-y; /* Set the repetition of each background image */
+    border-radius: 15ex;
+  }
+
+  .background-images:hover{
+    background-image: url('image2.jpg');
+  }
+  
