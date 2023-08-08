@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <title>Frontend Mentor | Bookmark landing page</title>
+    <link rel="stylesheet" href="./css/style.css" />
+
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style>
+      .attribution {
+        font-size: 11px;
+        text-align: center;
+      }
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <nav class="nav">
+        <a href="#" class="nav-logo"> </a>
+        <div class="nav-link">
+          <a href="#" class="link">FEATURES</a>
+          <a href="#" class="link">PRICING</a>
+          <a href="#" class="link">CONTACT</a>
+          <button class="login-btn" type="button">LOGIN</button>
+        </div>
+      </nav>
+    </header>
+
+    <section class="sec-1">
+      <div class="text-part">
+        <div class="title">A Simple Bookmark Manager</div>
+        <div class="para">
+          A clean and simple interface to organise your favourite websites. Open
+          a new browser tab and see your site load instantly. Try it for free.
+        </div>
+        <div class="btns">
+          <a href="#" class="btn">Get it on Chrome</a>
+          <a href="#" class="btn">Get it on Firfox</a>
+        </div>
+      </div>
+      <div class="img-part"></div>
+    </section>
+
+    <sectino class="sec-2">
+      <h2 class="features">Features</h2>
+      <p class="para">
+        Our aim is to make it quick and easy for you to access your favorite
+        websites. Your bookmarks sync between your devices and so you can them
+        on the go.
+      </p>
+    </sectino>
+
+    <section class="sec-3">
+      <div class="tabs">
+        <button
+          class="tab-link active"
+          onclick="handleClick(0, 'simple-bookmarking')"
+        >
+          Simple Bookmarking
+        </button>
+        <button class="tab-link" onclick="handleClick(1, 'speedy-searching')">
+          Speedy Searching
+        </button>
+        <button class="tab-link" onclick="handleClick(2, 'easy-sharing')">
+          Easy Sharing
+        </button>
+      </div>
+      <div class="tabs-content" id="simple-bookmarking" style="display: flex">
+        <div class="content-img"></div>
+        <div class="content-text">
+          <h2 class="title">Bookmark in one click</h2>
+          <p class="para">
+            Organise your bookmarks however you like. Our simple and
+            drag-and-drop interface give you complete control over how you
+            manage your favourite sites.
+          </p>
+          <a href="" class="btn">More Info</a>
+        </div>
+      </div>
+      <div class="tabs-content" id="speedy-searching" style="display: none">
+        <div class="content-img img-part-2"></div>
+        <div class="content-text">
+          <h2 class="title">Intelligent search</h2>
+          <p class="para">
+            Our pawerful search feature will help you fined save sites in no
+            time at all. No need to trawl through all of your bookmarks.
+          </p>
+          <a href="" class="btn">More Info</a>
+        </div>
+      </div>
+      <div
+        class="tabs-content tabs-content"
+        id="easy-sharing"
+        style="display: none"
+      >
+        <div class="content-img img-part-3"></div>
+        <div class="content-text">
+          <h2 class="title">Share your bookmarks</h2>
+          <p class="para">
+            Easily share your bookmarks and collection with others. Create a
+            sherable link that you can send at the click of button.
+          </p>
+          <a href="" class="btn">More Info</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="sec-4">
+      <h2 class="title">Download the extension</h2>
+      <div class="para">
+        We've got more browsers in the pipeline. Please do let us know if you've
+        got a favourite you'd like us to prioritize
+      </div>
+
+      <div class="cards">
+        <div class="card">
+          <div class="browser-icon"></div>
+          <h2 class="browser-title">Add to Chrome</h2>
+          <div class="sub-title">Minimum version 62</div>
+          <div class="dotted-line"></div>
+          <a href="#" class="browser-btn">Add & Install Extension</a>
+        </div>
+        <div class="card">
+          <div class="browser-icon"></div>
+          <h2 class="browser-title">Add to Firefox</h2>
+          <div class="sub-title">Minimum version 55</div>
+          <div class="dotted-line"></div>
+          <a href="#" class="browser-btn">Add & Install Extension</a>
+        </div>
+        <div class="card">
+          <div class="browser-icon"></div>
+          <h2 class="browser-title">Add to Opera</h2>
+          <div class="sub-title">Minimum version 46</div>
+          <div class="dotted-line"></div>
+          <a href="#" class="browser-btn">Add & Install Extension</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="sec-5">
+      <h2 class="title">Frequently Asked Question</h2>
+      <div class="para">
+        Here are some of our FAQs. If you have any other questions you'd like
+        answered please feel free to email us.
+      </div>
+
+      <div class="drop-down">
+        <div class="question-part">
+          <div class="drop-menu">
+            <div class="drop-text">What is Bookmark ?</div>
+            <button type="button" onclick="handleDropdDown(0)" class="drop-btn"></button>
+          </div>
+          <div class="down-content" style="display: none;">
+            <h3>Bookmarks</h3>
+            <p>
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Mollitia
+              itaque eveniet ea autem molestiae natus accusantium aperiam
+              blanditiis iusto nemo, vero quas consequatur quia, nobis illo
+              ipsa, dolor voluptatem alias esse. Beatae officiis natus assumenda
+              sit libero, animi iusto adipisci.
+            </p>
+            <div class="down-close">
+              <button type="button" onclick="handleClose(0)" class="close"></button>
+            </div>
+          </div>
+        </div>
+        <div class="question-part">
+          <div class="drop-menu">
+            <div class="drop-text">How can I request a new browser ?</div>
+            <button type="button" onclick="handleDropdDown(1)" class="drop-btn"></button>
+          </div>
+          <div class="down-content" style="display: none;">
+            <h3>Request a new browser</h3>
+            <p>
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Mollitia
+              itaque eveniet ea autem molestiae natus accusantium aperiam
+              blanditiis iusto nemo, vero quas consequatur quia, nobis illo
+              ipsa, dolor voluptatem alias esse. Beatae officiis natus assumenda
+              sit libero, animi iusto adipisci.
+            </p>
+            <div class="down-close">
+              <button type="button" onclick="handleClose(1)" class="close"></button>
+            </div>
+          </div>
+        </div>
+        <div class="question-part">
+          <div class="drop-menu">
+            <div class="drop-text">Is there a mobile app ?</div>
+            <button type="button" onclick="handleDropdDown(2)" class="drop-btn"></button>
+          </div>
+          <div class="down-content" style="display: none;">
+            <h3>Mobile app</h3>
+            <p>
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Mollitia
+              itaque eveniet ea autem molestiae natus accusantium aperiam
+              blanditiis iusto nemo, vero quas consequatur quia, nobis illo
+              ipsa, dolor voluptatem alias esse. Beatae officiis natus assumenda
+              sit libero, animi iusto adipisci.
+            </p>
+            <div class="down-close">
+              <button type="button" onclick="handleClose(2)" class="close"></button>
+            </div>
+          </div>
+        </div>
+        <div class="question-part">
+          <div class="drop-menu">
+            <div class="drop-text">What about othr chromium browser ?</div>
+            <button type="button" onclick="handleDropdDown(3)" class="drop-btn"></button>
+          </div>
+          <div class="down-content" style="display: none;">
+            <h3>Other chromium browser</h3>
+            <p>
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Mollitia
+              itaque eveniet ea autem molestiae natus accusantium aperiam
+              blanditiis iusto nemo, vero quas consequatur quia, nobis illo
+              ipsa, dolor voluptatem alias esse. Beatae officiis natus assumenda
+              sit libero, animi iusto adipisci.
+            </p>
+            <div class="down-close">
+              <button type="button" onclick="handleClose(3)" class="close"></button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <button type="button" class="btn">More Info</button>
+    </section>
+
+
+    <section class="sec-6">
+      <div class="box">
+        <div class="head-text">35, 000 + ALREADY JOINED</div>
+        <h2 class="mid-text">Stay up-to-date with what we are doing</h2>
+        <div class="search-btn">
+          <input type="search" class="search" placeholder="Enter your email address"></input>
+          <input type="button" value="Contact Us">
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <div class="links">
+        <div class="logo"></div>
+        <a href="" class="link">FEATURES</a>
+        <a href="" class="link">PRICING</a>
+        <a href="" class="link">CONTACT</a>
+      </div>
+      <div class="icons">
+        <div class="facebook"></div>
+        <div class="twitter"></div>
+      </div>
+    </footer>
+
+    <!-- <footer>
+      <p class="attribution">
+        Challenge by
+        <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+          >Frontend Mentor</a
+        >. Coded by <a href="#">Your Name Here</a>.
+      </p>
+    </footer> -->
+  </body>
+
+  <script>
+    function handleClick(index, id) {
+      items = document.getElementsByClassName("tab-link");
+      for (i = 0; i < items.length; i++) {
+        items[i].classList.remove("active");
+      }
+
+      x = document.getElementsByClassName("tab-link")[index];
+      x.classList.add("active");
+
+      tabsContent = document.getElementsByClassName("tabs-content");
+      for (let index = 0; index < tabsContent.length; index++) {
+        const element = tabsContent[index];
+        element.style.display = "none";
+      }
+      document.getElementById(id).style.display = "flex";
+    }
+
+
+    function handleDropdDown(index){
+      const down_content_el = document.getElementsByClassName("down-content")[index];
+      down_content_el.style.display = "flex";
+      // console.log(down_content_el);
+    }
+
+    function handleClose(index){
+      const down_content_el = document.getElementsByClassName("down-content")[index];
+      down_content_el.style.display = "none";
+    }
+  </script>
+</html>
