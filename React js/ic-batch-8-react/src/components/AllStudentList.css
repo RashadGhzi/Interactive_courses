@@ -1,0 +1,48 @@
+.td-style {
+  padding: 10px;
+  border-bottom: 1px solid;
+  border-left: 1px solid;
+  /* font-size: 11px; */
+  /* font-weight: bold; */
+  height: 160px;
+  
+}
+
+.td-style input{
+    font-size: 16px;
+    width: 100%;
+    border: 1px solid #00f600;
+    padding: 4px;
+    border-radius: 3px;
+}
+
+.td-style button{
+    font-size: 11px;
+  font-weight: bold;
+  letter-spacing: 2px;
+  padding: 5px 0px;
+  margin: 2px;
+  border-radius: 4px;
+  border: none;
+  cursor: pointer;
+  color: #ffff;
+  width: 100%;
+  background-color: darkgreen;
+}
+
+.td-style button:hover{
+    opacity: 0.5;
+}
+
+.td-style input:focus{
+    border: none;
+    outline: none;
+}
+
+.td-style:nth-child(11) {
+  width: 150px;
+}
+
+.students-body{
+    max-width: 90vw !important;
+}
