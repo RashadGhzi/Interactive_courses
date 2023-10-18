@@ -1,23 +1,36 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import styled from "styled-components";
 
 export default function Update(props) {
   const id = props.context.id;
+  // console.log(id)
   const setId = props.context.setId;
   const students = props.context.students;
   const setStudents = props.context.setStudents;
 
-  const student_object = students.find((student) => student.id === id);
+  var student_object = students.find((student) => student.id === id);
 
-  const [name, setName] = useState(student_object.name);
-  const [age, setAge] = useState(student_object.age);
-  const [gender, setGender] = useState(student_object.gender);
-  const [email, setEmail] = useState(student_object.email);
-  const [phone, setPhone] = useState(student_object.phone);
-  const [address, setAddress] = useState(student_object.address);
-  const [country, setCountry] = useState(student_object.country);
-  const [skills, setSkills] = useState(student_object.skills);
-  const [interests, setInterests] = useState(student_object.interests);
+  const [name, setName] = useState("");
+  const [age, setAge] = useState(0);
+  const [gender, setGender] = useState(0);
+  const [email, setEmail] = useState("");
+  const [phone, setPhone] = useState(0);
+  const [address, setAddress] = useState("");
+  const [country, setCountry] = useState("");
+  const [skills, setSkills] = useState([]);
+  const [interests, setInterests] = useState([]);
+
+  useEffect(() => {
+    setName(student_object.name);
+    setAge(student_object.age);
+    setGender(student_object.gender);
+    setEmail(student_object.email);
+    setPhone(student_object.phone);
+    setAddress(student_object.address);
+    setCountry(student_object.country);
+    setSkills(student_object.skills);
+    setInterests(student_object.interests);
+  },[student_object]);
 
   const updateStudent = () => {
     const upd_student = students.map((element) => {
